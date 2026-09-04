@@ -732,7 +732,7 @@ const SCREENS = {
      <li class="build"><span class="tick"></span>Reflection entry 5<span class="tm">WBL 1101</span></li>
      <li class="build" style="animation-delay:2.1s"><span class="tick"></span>Milestone · MTH 1305 problem set 5 ${chipN('set by faculty · effective today')}<span class="tm">due Fri</span></li></ul></div>
     <p class="mini">${chipG('Assembled by the AI layer from her programme, cohort, placement and week')} — nobody hand-built this list. Course milestones are created by faculty and admins on Digital Campus and appear here on their effective date.</p>`},
-  lms:{title:'D2L Brightspace · via Digital Campus',need:'view',html:()=>`<div class="row"><h4>My classes · week 5 overview</h4>${chipN('asynchronous · self-paced')}${chipN('separate sign-in to the partner colleges')}</div>
+  lms:{title:'Canvas · via Digital Campus',need:'view',html:()=>`<div class="row"><h4>My classes · week 5 overview</h4>${chipN('asynchronous · self-paced')}${chipN('separate sign-in to the partner colleges')}</div>
     <div class="row" style="align-items:stretch">
      <div class="card" style="flex:1"><b>MTH 1305</b> Mathematics for Business and Decision-Making<div class="mini">Westminster College</div><ul style="margin-top:8px"><li><span class="tick done">✓</span>Module 5 videos<span class="tm">watched</span></li><li><span class="tick"></span>Problem set 5<span class="tm">due Fri</span></li></ul></div>
      <div class="card" style="flex:1"><b>COM 1301</b> Public Speaking<div class="mini">Miami Dade College</div><ul style="margin-top:8px"><li><span class="tick"></span>Discussion post + 2 peer replies<span class="tm">due Thu</span></li><li><span class="tick"></span>Speech outline 2<span class="tm">due Sun</span></li></ul></div></div>
@@ -740,7 +740,7 @@ const SCREENS = {
      <div class="msg me"><small>Sofia Z. · Berkane</small>For this week's prompt I chose the speech our regional director gave after the floods: short, specific, and he answered the question everyone in the room actually had.</div>
      <div class="msg peer"><small>Marcus T. · Miami</small>Agreed — the best ones answer the question in the room, not the one on the slide.</div>
      <div class="msg peer"><small>Dana K. · Miami</small>Sofia, could you post the link? I'd like to use it for my outline.</div></div></div>
-    <p class="mini">${chipG('Digital Campus links')} ${chipN('The academic record stays with D2L and the partner colleges')}</p>`},
+    <p class="mini">${chipG('Digital Campus links')} ${chipN('The academic record stays with Canvas and the partner colleges')}</p>`},
   studio:{title:'WBL Studio I · live · 14:00',need:'view',html:()=>`<div class="row"><h4>WBL Studio I</h4>${chipG('Live')}<span class="mini" style="margin-left:auto">Coach: Touria Benlafqih</span></div>
     <div class="grid">${tile('touria','live')}${tile('sofia','me')}${tile('yassine')}${tile('imane')}${tile('salma')}${tile('omar')}</div>
     <div class="row" style="align-items:stretch"><div class="card" style="flex:1"><h4>Community</h4><div class="mini" style="margin-top:6px">Cohort roster · 14 classmates<br>Next: FYE 1001, today 15:30<br>Discord study thread · 6 online</div></div><div class="card" style="flex:1"><h4>Now speaking</h4><div style="margin-top:6px;font-weight:500">Sofia Zaoui</div><div class="mini">unmuted · 00:42</div></div></div>`},
@@ -774,7 +774,7 @@ const SCREENS = {
     <div class="field"><small>Note from the registration officer</small>Registered for Spring 2027 in Jenzabar — four courses, Tuesday and Thursday clear. Your schedule appears by tomorrow.</div>
     <p class="mini">She never chased it.</p>`},
   mentor:{title:'AI Mentor · online · 21:04',need:'q8',html:()=>{const qs=['I\'m behind on my reflection entries and my employer days are full next week.','What do I need ready for Friday\'s FLA session?','Can you tell me my grade in MTH 1305?'];
-    const ans=['You have two WBL 1101 reflection entries open — weeks 4 and 5 — and Tuesday and Thursday next week are Frigo Hafid days. Two short entries — one on the orientation, one on the sorting line — would clear both before Friday\'s FLA meeting. Want me to draft prompts for each?','Friday\'s FLA 1301 session with Dr. Al Karchi continues the week 5 reading. Bring the example from your COM 1301 post — it fits the reading. Your Spring 2027 registration is done and doesn\'t change Friday.','I don\'t see grades — that stays with Westminster and your D2L gradebook. I can open it for you, or show your week. Grades are never part of what I hold.'];
+    const ans=['You have two WBL 1101 reflection entries open — weeks 4 and 5 — and Tuesday and Thursday next week are Frigo Hafid days. Two short entries — one on the orientation, one on the sorting line — would clear both before Friday\'s FLA meeting. Want me to draft prompts for each?','Friday\'s FLA 1301 session with Dr. Al Karchi continues the week 5 reading. Bring the example from your COM 1301 post — it fits the reading. Your Spring 2027 registration is done and doesn\'t change Friday.','I don\'t see grades — that stays with Westminster and your Canvas gradebook. I can open it for you, or show your week. Grades are never part of what I hold.'];
     const q=st.q8;
     return `<div class="row">${chipG('Online')}${chipN('Knows: programme, placement, week')}${chipN('Never: grades')}</div>
     <div class="thread">${q>=0?`<div class="msg me">${esc(qs[q])}</div><div class="msg bot">${esc(ans[q])}</div><div class="msg bot">This one is worth a person. ${st.esc8?`<div class="mini" style="margin-top:4px">${chipG('Handed to Dr. Al Karchi')} — your message and this thread went with it. He replies in the morning.</div>`:`<button class="btn btn-primary" style="margin-top:6px" data-act="esc8">Talk to Dr. Al Karchi</button>`}</div>`:`<div class="msg bot">Good evening, Sofia. It's late — what's on your mind?</div>`}</div>
@@ -837,7 +837,7 @@ const STORY = [
    {card:true}
   ]},
  {n:2,label:'Monday, mid-morning',stop:'US courses',day:'Mon',when:'Monday · 09:10',title:'Into the US partner courses.',contracts:['LMS'],
-  cap:'Digital Campus links. D2L and the partner colleges deliver. The academic record stays where it belongs.',
+  cap:'Digital Campus links. Canvas and the partner colleges deliver. The academic record stays where it belongs.',
   proof:'We are not building a shadow LMS and not pretending we have one. The learning platform contract is what makes this door open on October 19.',
   am:{auto:'Link-out and access hub',man:'Second sign-in to Westminster and Miami Dade'},
   beats:[
@@ -1125,7 +1125,7 @@ devEl.addEventListener('click',e=>{ if(e.target===devEl && !devCont.hidden) clos
 function showCard(sc){
   scEl.className='sc';
   scEl.innerHTML=`<div class="lab">${esc(sc.label)} · why this matters</div><h2>${esc(sc.title)}</h2>
-   <div class="cts">${sc.contracts.map(c=>`<span class="ctag ${c}">${c}</span>`).join('')}<span class="v">argues for: ${sc.contracts.map(c=>({AI:'IBL.AI',LMS:'D2L',Integrator:'the integrator'})[c]).join(' · ')}</span></div>
+   <div class="cts">${sc.contracts.map(c=>`<span class="ctag ${c}">${c}</span>`).join('')}<span class="v">argues for: ${sc.contracts.map(c=>({AI:'IBL.AI',LMS:'Canvas',Integrator:'the integrator'})[c]).join(' · ')}</span></div>
    <p>${esc(sc.proof)}</p>
    <div class="capq">${esc(sc.cap)}</div>
    ${sc.am?`<div class="am"><div class="g"><b>The platform did</b><span>${esc(sc.am.auto)}</span></div><div class="a"><b>A named person did</b><span>${esc(sc.am.man)}</span></div></div>`:''}
@@ -1145,7 +1145,7 @@ function showEnd(){
    <div class="lab" style="margin-top:20px">Decisions requested</div>
    <div class="decs">
     <div class="dec"><b>AI</b><span>IBL.AI — personalisation and the student mentor layer. Monday morning, Thursday night, Friday, Sunday.</span></div>
-    <div class="dec"><b>LMS</b><span>D2L — course delivery and US partner access. Monday.</span></div>
+    <div class="dec"><b>LMS</b><span>Canvas — course delivery and US partner access. Monday.</span></div>
     <div class="dec"><b>Integrator</b><span>Continues with AI and LMS; SIS stays manual. Student, Admin and Employer platforms. Tuesday to Friday.</span></div></div>
    <div class="dates"><span><b>1 Oct</b>Portal ready for testing</span><span><b>12 Oct</b>Orientation opens</span><span><b>19 Oct</b>Classes begin</span></div>
    <div class="lab" style="margin-top:18px">Revisit a day</div>
